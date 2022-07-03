@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;400&family=Bebas+Neue&family=Lato:ital,wght@1,900&family=Lobster&family=Oswald:wght@200;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;1,100&family=Raleway:wght@600&family=Roboto+Condensed&family=Rye&family=Splash&display=swap');
+#one {
+    background-image: url("https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh
+}
+
+#buttons a {
+    background-color: black;
+    border: 25px;
+}
+
+#buttons a:hover {
+    background-color: rgb(17, 177, 38);
+}
+
+p {
+    font-family: 'Popins';
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Popins';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#vision {
+    background-color: azure;
+    font-family: "lato";
+}
+
+#vision p {
+    font-family: "Oswald";
+    font-weight: bold;
+    color: #ccc;
+}
