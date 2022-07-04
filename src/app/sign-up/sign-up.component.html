@@ -12,21 +12,26 @@
                                     <h4 class="mt-1 mb-5 pb-1">Welcome to Mkulima Shupavu</h4>
                                 </div>
 
-                                <form #userReg="ngForm" (ngSubmit)="onSubmit(userReg.value)">
+                                <form [formGroup]="myForm" (ngSubmit)="registration()">
 
                                     <div class="form-outline mb-4">
-                                        <input type="username" ngModel name="username" id="form2Example11" class="form-control" placeholder="username" />
+                                        <input type="username" formControlName="username" id="form2Example11" class="form-control" placeholder="username" />
                                         <label class="form-label" for="form2Example11">Username</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="text" ngModel name="email" id="form2Example22" class="form-control" />
+                                        <input type="text" formControlName="email" id="form2Example22" class="form-control" />
                                         <label class="form-label" for="form2Example22">Email</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" ngModel name="password" id="form2Example22" class="form-control" />
+                                        <input type="password" formControlName="password1" id="form2Example22" class="form-control" />
                                         <label class="form-label" for="form2Example22">Password</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" formControlName="password2" id="form2Example22" class="form-control" />
+                                        <label class="form-label" for="form2Example22">Repeat password</label>
                                     </div>
 
 
@@ -37,7 +42,7 @@
 
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2">Don't have an account?</p>
-                                        <a href="signup" type="button" class="btn btn-outline-danger">Signup</a>
+                                        <a href="login" type="button" class="btn btn-outline-danger">Login</a>
                                     </div>
 
                                 </form>
