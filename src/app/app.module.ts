@@ -7,7 +7,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
-import{FormsModule,ReactiveFormsModule} from '@angular/forms';  
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { FarmerComponent } from './farmer/farmer.component';  
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
     SignUpComponent,
     HomeComponent,
     LoginComponent,
+    FarmerComponent,
   ],
   imports: [
     BrowserModule,
