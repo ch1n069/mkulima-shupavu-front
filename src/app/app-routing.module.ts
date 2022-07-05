@@ -4,13 +4,15 @@ import { LoginComponent } from './login/login.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {HomeComponent} from './home/home.component';
 import {LoanFormComponent} from './loan-form/loan-form.component';
+import {FarmerComponent} from './farmer/farmer.component';
 
 const routes: Routes = [
-  {path:"" , redirectTo:"login", pathMatch:"full"},
+  {path:"" , redirectTo:"home", pathMatch:"full"},
   {path:"login" , component:LoginComponent},
   {path:"signup", component:SignUpComponent},
   {path:"home", component:HomeComponent},
   {path:"loanform", component:LoanFormComponent},
+  {path:"farmer", component:FarmerComponent}
 
 ];
 
