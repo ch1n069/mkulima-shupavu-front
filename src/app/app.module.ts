@@ -8,7 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
-import { FarmerComponent } from './farmer/farmer.component';  
+import { FarmerComponent } from './farmer/farmer.component';
+import { ServicesComponent } from './services/services.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { AgentComponent } from './agent/agent.component';  
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { FarmerComponent } from './farmer/farmer.component';
     HomeComponent,
     LoginComponent,
     FarmerComponent,
+    ServicesComponent,
+    OurServicesComponent,
+    AgentComponent,
   ],
   imports: [
     BrowserModule,
