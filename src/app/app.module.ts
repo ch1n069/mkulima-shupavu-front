@@ -10,7 +10,8 @@ import { HttpClientModule } from  '@angular/common/http';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { FarmerComponent } from './farmer/farmer.component';
 import { ServicesComponent } from './services/services.component';
-import { OurServicesComponent } from './our-services/our-services.component';  
+import { OurServicesComponent } from './our-services/our-services.component';
+import { AgentComponent } from './agent/agent.component';  
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
     FarmerComponent,
     ServicesComponent,
     OurServicesComponent,
+    AgentComponent,
   ],
   imports: [
     BrowserModule,

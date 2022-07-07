@@ -5,14 +5,18 @@ import {SignUpComponent} from './sign-up/sign-up.component'
 import {HomeComponent} from './home/home.component'
 import { FarmerComponent } from './farmer/farmer.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { AgentComponent } from './agent/agent.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"" , redirectTo:"home", pathMatch:"full"},
-  {path:"login" , component:LoginComponent},
-  {path:"signup", component:SignUpComponent},
-  {path:"home", component:HomeComponent},
-  {path:"farmer", component:FarmerComponent},
-  {path:"our-services", component:OurServicesComponent}
+  {path:"login" ,canActivate:[LoginGuard] , component:LoginComponent},
+  {path:"signup", canActivate:[LoginGuard], component:SignUpComponent},
+  {path:"home", canActivate:[AuthGuard, LoginGuard], component:HomeComponent},
+  {path:"farmer",canActivate:[AuthGuard], component:FarmerComponent},
+  {path:"our-services", canActivate:[AuthGuard, LoginGuard], component:OurServicesComponent},
+  {path:"agent", canActivate:[AuthGuard, LoginGuard],  component:AgentComponent},
 
 ];
 
