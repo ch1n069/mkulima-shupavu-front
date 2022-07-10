@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   formGroup!: FormGroup;
   router: any;
-
+  
   constructor(private loginService: LoginService){}
   
   ngOnInit(){

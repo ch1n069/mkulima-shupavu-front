@@ -8,8 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LoanFormComponent } from './loan-form/loan-form.component';
 import { HttpClientModule } from  '@angular/common/http';
-import{FormsModule,ReactiveFormsModule} from '@angular/forms';
-import { FarmerComponent } from './farmer/farmer.component';  
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FarmerComponent } from './farmer/farmer.component';
+import { GuarantorFormComponent } from './guarantor-form/guarantor-form.component';
+import { SupplierFormComponent } from './supplier-form/supplier-form.component';
+import { BuyerFormComponent } from './buyer-form/buyer-form.component';
+import { InputsComponent } from './inputs/inputs.component';  
 
 
 @NgModule({
@@ -20,12 +24,16 @@ import { FarmerComponent } from './farmer/farmer.component';
     LoginComponent,
     LoanFormComponent,
     FarmerComponent,
+    GuarantorFormComponent,
+    SupplierFormComponent,
+    BuyerFormComponent,
+    InputsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,  
+    FormsModule,
     ReactiveFormsModule,
   ],
   providers: [],
