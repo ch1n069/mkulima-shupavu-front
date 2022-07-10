@@ -13,9 +13,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formGroup!: FormGroup;
-  router: any;
-  
-  constructor(private loginService: LoginService){}
+
+  constructor(private loginService: LoginService, private router:Router){}
   
   ngOnInit(){
     this.initForm();
@@ -31,14 +30,16 @@ export class LoginComponent implements OnInit {
    LoginProcess(){
      if(this.formGroup.valid){
        this.loginService.loginUser(this.formGroup.value).subscribe(result=>{
-         if(result.success){
-           console.log(result);
-           alert(result.message)
-           this.router.navigate(['home'])
+         if(result!=null){
+          localStorage.setItem("id_token",result.token)
+          this.router.navigate(['/farmer'])
+          console.log(result.token)
+
+
+           
          }
          else{
-          console.log(result)
-          alert(result.message)
+          alert("Check your password or email")
 
          }
        })

@@ -1,0 +1,232 @@
+<nav class="navbar navbar-expand-lg navbar-light p-2">
+    <a class="navbar-brand" href="home">Mkulima Shupavu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="container">
+        <div class="main-body">
+
+            <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                </ol>
+            </nav> -->
+            <!-- navbar top -->
+            <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                    <div id="card-1" class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="http://3.bp.blogspot.com/-3dJ2XbvBU38/Vg52WsvmM2I/AAAAAAAF28Q/8CfaWTTJWrs/s1600/contacts.jpg" alt="Admin" class="rounded-circle" height="200" width="200">
+                                <div class="mt-3">
+                                    <h4>Shupavu Agent</h4>
+                                    <p class="text-secondary mb-1">Location : Kiambu</p>
+                                    <p class="text-muted font-size-sm">Agent Id : 23435235</p>
+                                    <p class="text-secondary mb-1">Contact : 071234567</p>
+                                    <p class="text-muted font-size-sm">Current farmers in my location : 20 </p>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit Profile</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- edit profile modal form -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center" id="exampleModalLabel">Edit your Profile</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">First Name</label>
+                                            <input type="text" class="form-control" id="fullnames" aria-describedby="emailHelp" placeholder="Enter Your full names">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Location</label>
+                                            <input type="integer" class="form-control" id="exampleInputPassword1" placeholder="Location">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Contact</label>
+                                            <input type="integer" class="form-control" id="exampleInputPassword1" placeholder="contact">
+                                        </div>
+
+
+
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Upload profile picture</label>
+                                            <input type="file" class="form-control-file" id="profilepicture">
+                                        </div>
+
+                                        <button class="mt-3" type="submit" class="btn btn-success">Submit</button>
+                                    </form>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8 mt-3">
+                    <h3 class="text-center">Farmers produce</h3>
+                    <table id="table" class="table ">
+                        <thead>
+                            <tr>
+                                <th scope="col">farmer</th>
+                                <th scope="col">crop</th>
+                                <th scope="col">Bags harvested</th>
+                                <th scope="col">Loan amount</th>
+                                <th scope="col">Total amount</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mkulima shupavu</th>
+                                <td>Beans</td>
+                                <td>10</td>
+                                <td>6000</td>
+                                <td>4000</td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">John Wafula</th>
+                                <td>Maize</td>
+                                <td>5</td>
+                                <td>2000</td>
+                                <td>8000</td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Jane kigoro</th>
+                                <td>Tomatoes</td>
+                                <td>6</td>
+                                <td>3000</td>
+                                <td>7000</td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Jane Wanjiku</th>
+                                <td>Maize</td>
+                                <td>5</td>
+                                <td>2000</td>
+                                <td>8000</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Emma shiundu</th>
+                                <td>Cabbages</td>
+                                <td>10</td>
+                                <td>3000</td>
+                                <td>7000</td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- produce table -->
+                    <div class="row gutters-sm">
+                        <div class="col-sm-6 mb-3 mt-5">
+                            <h3 class="text-center"> Inputs disbursed</h3>
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Inputs</th>
+                                        <th scope="col">Crop</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Revenue</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>fertilzer,seeds, Herbicides</td>
+                                        <td>mazie</td>
+                                        <td>5</td>
+                                        <td>1000</td>
+                                        <td>5000</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">jan-may-2021</th>
+                                        <td>maize</td>
+                                        <td>5</td>
+                                        <td>1000</td>
+                                        <td>5000</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">jan-may-2021</th>
+                                        <td>maize</td>
+                                        <td>5</td>
+                                        <td>1000</td>
+                                        <td>5000</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">jan-may-2021</th>
+                                        <td>maize</td>
+                                        <td>5</td>
+                                        <td>1000</td>
+                                        <td>5000</td>
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <button class="btn btn-success">Add Customer Produce</button>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

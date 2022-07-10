@@ -9,7 +9,7 @@ import { baseUrl } from 'src/environments/environment';
 })
 export class LoginService {
 
-  private _loginurl = 'http://localhost:8000/api/signin'
+  // private _loginurl = 'http://localhost:8000/api/signin'
 
   constructor(private http: HttpClient) { }
 
