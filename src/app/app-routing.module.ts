@@ -8,15 +8,18 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
+import { SupplierComponent } from './supplier/supplier.component';
 
 const routes: Routes = [
   {path:"" , redirectTo:"home", pathMatch:"full"},
   {path:"login" ,canActivate:[LoginGuard] , component:LoginComponent},
   {path:"signup", canActivate:[LoginGuard], component:SignUpComponent},
-  {path:"home", canActivate:[AuthGuard, LoginGuard], component:HomeComponent},
+  {path:"home", canActivate:[ LoginGuard], component:HomeComponent},
   {path:"farmer",canActivate:[AuthGuard], component:FarmerComponent},
   {path:"our-services", canActivate:[AuthGuard, LoginGuard], component:OurServicesComponent},
   {path:"agent", canActivate:[AuthGuard, LoginGuard],  component:AgentComponent},
+  {path:"supplier", component:SupplierComponent},
+
 
 ];
 

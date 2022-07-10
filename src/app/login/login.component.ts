@@ -30,9 +30,12 @@ export class LoginComponent implements OnInit {
    LoginProcess(){
      if(this.formGroup.valid){
        this.loginService.loginUser(this.formGroup.value).subscribe(result=>{
+        
+        this.router.navigate(['/farmer'])
+        
+
          if(result!=null){
           localStorage.setItem("id_token",result.token)
-          this.router.navigate(['/farmer'])
           console.log(result.token)
 
 

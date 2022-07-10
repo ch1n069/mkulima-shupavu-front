@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisteruserService } from '../registeruser.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -11,7 +12,7 @@ export class SignUpComponent implements OnInit {
 
   myForm!: FormGroup;
 
-  constructor(private registeruser: RegisteruserService){}
+  constructor(private registeruser: RegisteruserService ,private router:Router) {}
   ngOnInit(){
     this.initForm();
   }
@@ -31,8 +32,11 @@ export class SignUpComponent implements OnInit {
   }
   registration(){
     if(this.myForm.valid){
-      this.registeruser.UserRegistration(this.myForm.value).subscribe(result => {
+      this.registeruser.UserRegistration(this.myForm.value).subscribe(result => { 
+        
         if(result.success){
+        this.router.navigate(['/login'])
+          
           console.log(result)
           alert(result.message)
         }else{

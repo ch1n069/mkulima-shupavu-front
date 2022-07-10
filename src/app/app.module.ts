@@ -11,7 +11,8 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { FarmerComponent } from './farmer/farmer.component';
 import { ServicesComponent } from './services/services.component';
 import { OurServicesComponent } from './our-services/our-services.component';
-import { AgentComponent } from './agent/agent.component';  
+import { AgentComponent } from './agent/agent.component';
+import { SupplierComponent } from './supplier/supplier.component';  
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AgentComponent } from './agent/agent.component';
     ServicesComponent,
     OurServicesComponent,
     AgentComponent,
+    SupplierComponent,
   ],
   imports: [
     BrowserModule,
