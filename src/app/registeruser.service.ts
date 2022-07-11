@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { baseUrl } from 'src/environments/environment';
 
@@ -8,10 +9,12 @@ import { baseUrl } from 'src/environments/environment';
 })
 export class RegisteruserService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient , router: Router) { }
   UserRegistration(data:any):Observable<any> {
     console.log("ima laice")
-    return this.http.post(`${baseUrl}rest-auth/registration/`, data);
+    return this.http.post(`${baseUrl}registration/`, data);
+    
+
 
   }
 }
