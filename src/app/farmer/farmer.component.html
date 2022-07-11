@@ -284,6 +284,7 @@
     </div>
 </div>
 
+{{result}}
 
 
 <!-- produce form -->
@@ -297,11 +298,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" (click)="calculate(firstnumber.value,secondnumber.value)">
+                <form action="">
                     <input type="text" #firstnumber>
                     <input type="text" #secondnumber>
 
-                    <button class="btn btn-sucess" type="submit"></button>
+                    <button (click)="calculate(firstnumber.value,secondnumber.value)" class="btn btn-sucess" type="submit"></button>
                 </form>
 
 

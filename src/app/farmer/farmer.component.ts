@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./farmer.component.css']
 })
 export class FarmerComponent implements OnInit {
-
+  result!: number
   constructor(private router:Router) { }
 
   ngOnInit(): void {}
@@ -23,7 +23,9 @@ export class FarmerComponent implements OnInit {
   button(){
     console.log('works')
   }
-  calculate(va1:string, va2:string){
+  calculate(val1:string, val2:string){
+    this.result = parseInt(val1)*parseInt(val2)
+
 
   }
 
