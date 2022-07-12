@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-loan-form',
@@ -8,15 +8,36 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 })
 export class LoanFormComponent implements OnInit {
     loanForm = new FormGroup({
-      firstName:new FormControl(null, Validators.required),
-      lastName:new FormControl(null, Validators.required),
-      idNumber:new FormControl(null, Validators.required),
-      gender:new FormControl(null, Validators.required),
-      occupation:new FormControl(null, Validators.required),
+      firstName:new FormControl('', [Validators.required]),
+      lastName:new FormControl('', [Validators.required]),
+      idNumber:new FormControl('', [Validators.required]),
+      gender:new FormControl('', [Validators.required]),
+      occupation:new FormControl('', [Validators.required]),
+      email:new FormControl('', [Validators.required,Validators.email]),
     });
     borrowLoan(){
-      console.warn(this.borrowLoan)
+      console.warn(this.loanForm.value)
     }
+    get firstName(){
+      return this.loanForm.get('firstName');
+    }
+    get lastName(){
+      return this.loanForm.get('lastName');
+    }
+    get idNumber(){
+      return this.loanForm.get('idNumber');
+    }
+    get gender(){
+      return this.loanForm.get('gender');
+    }
+    get occupation(){
+      return this.loanForm.get('occupation');
+    }
+    get email(){
+      return this.loanForm.get('email');
+    }
+
+
   constructor() { }
 
   ngOnInit(): void {

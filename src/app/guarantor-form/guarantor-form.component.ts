@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-guarantor-form',
@@ -8,13 +8,25 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 })
 export class GuarantorFormComponent implements OnInit {
   guarantorForm = new FormGroup({
-    name:new FormControl(''),
-    contact:new FormControl(''),
-    location:new FormControl(''),
-    idNumber:new FormControl(''),
+    name:new FormControl('',[Validators.required]),
+    contact:new FormControl('',[Validators.required]),
+    location:new FormControl('',[Validators.required]),
+    idNumber:new FormControl('',[Validators.required]),
   })
   guarantor(){
-    console.warn(this.guarantor)
+    console.warn(this.guarantorForm.value)
+  }
+  get name(){
+    return this.guarantorForm.get('name');
+  }
+  get contact(){
+    return this.guarantorForm.get('contact');
+  }
+  get location(){
+    return this.guarantorForm.get('location');
+  }
+  get idNumber(){
+    return this.guarantorForm.get('idNumber');
   }
   constructor() { }
 
