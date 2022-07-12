@@ -32,7 +32,7 @@ const routes: Routes = [
   // { path:"buyer", component:BuyerFormComponent },
   { path:"supplier", canActivate: [AuthGuard], component:SupplierFormComponent },
   { path:"supplier", component:SupplierFormComponent },
-  { path:"inputs", component:InputsComponent },
+  { path:"inputs", canActivate: [AuthGuard], component:InputsComponent },
   { path:"home", canActivate:[ LoginGuard], component:HomeComponent },
 
 ];
