@@ -16,6 +16,6 @@ export class LoginService {
  
 
   loginUser(data:any):Observable<any>{
-    return this.http.post(`${baseUrl}rest-auth/login/`, data);
+    return this.http.post(`${baseUrl}login/`, data);
   }
 }

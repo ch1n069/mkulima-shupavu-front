@@ -13,25 +13,28 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
+import { SupplierComponent } from './supplier/supplier.component';
 
 const routes: Routes = [
+
   { path:"" , redirectTo:"home", pathMatch:"full" },
   { path:"home", component:HomeComponent },
   { path:"login" ,canActivate:[LoginGuard] , component:LoginComponent },
   { path:"signup", canActivate:[LoginGuard], component:SignUpComponent },
-  { path:"home", canActivate:[AuthGuard, LoginGuard], component:HomeComponent },
   { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
   { path:"our-services", canActivate:[AuthGuard, LoginGuard], component:OurServicesComponent },
   { path:"agent", canActivate:[AuthGuard, LoginGuard],  component:AgentComponent },
-  { path:"loan", component:LoanFormComponent },
-  // { path:"loan", canActivate: [AuthGuard], component:LoanFormComponent },
-  { path:"guarantor", component:GuarantorFormComponent },
+  // { path:"loan", component:LoanFormComponent },
+  { path:"loan", canActivate: [AuthGuard], component:LoanFormComponent },
+  // { path:"guarantor", component:GuarantorFormComponent },
   { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
-  // { path:"guarantor", canActivate: [AuthGuard], component:GuarantorFormComponent },
+  { path:"guarantor", canActivate: [AuthGuard], component:GuarantorFormComponent },
   // { path:"buyer", component:BuyerFormComponent },
   { path:"supplier", canActivate: [AuthGuard], component:SupplierFormComponent },
   { path:"supplier", component:SupplierFormComponent },
-  { path:"inputs", component:InputsComponent },
+  { path:"inputs", canActivate: [AuthGuard], component:InputsComponent },
+  { path:"home", canActivate:[ LoginGuard], component:HomeComponent },
+
 ];
 
 @NgModule({
