@@ -1,0 +1,34 @@
+<section style="height: 100vh;">
+    <div class="container" style="padding-top: 50px;">
+        <div style="padding-top: 30px;padding-bottom: 30px;background-color: #eee;">
+            <h3 style="padding-bottom: 20px;" class="text-center">Please Add Gurantor Details</h3>
+            <form [formGroup]="guarantorForm" (ngSubmit)="guarantor()" style="margin: auto;width: 50%;">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input formControlName="name" type="text" class="form-control" id="fullnames" aria-describedby="emailHelp" placeholder="Full Names">
+                </div>
+                <div class="text-danger" *ngIf="name && name.invalid && name.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleInputPassword1">Contact</label>
+                    <input formControlName="contact" type="integer" class="form-control" id="exampleInputPassword1" placeholder="Contact">
+                </div>
+                <div class="text-danger" *ngIf="contact && contact.invalid && contact.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleInputPassword1">Location</label>
+                    <input formControlName="location" type="text" class="form-control" id="exampleInputPassword1" placeholder="Location">
+                </div>
+                <div class="text-danger" *ngIf="location && location.invalid && location.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleInputPassword1">ID Number</label>
+                    <input formControlName="idNumber" type="integer" class="form-control" id="exampleInputPassword1" placeholder="ID Number">
+                </div>
+                <div class="text-danger" *ngIf="idNumber && idNumber.invalid && idNumber.touched">This field is required</div>
+                <!-- <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleFormControlFile1">Upload your identification card</label>
+                    <input type="file" class="form-control-file" id="identificationcard">
+                </div> -->
+                <button [disabled]="guarantorForm.invalid" style="margin-top: 20px;" type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

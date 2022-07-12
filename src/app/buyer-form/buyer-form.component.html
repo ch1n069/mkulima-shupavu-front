@@ -1,0 +1,22 @@
+<section style="height: 100vh;">
+    <div class="container" style="padding-top: 50px;">
+        <div style="padding-top: 30px;padding-bottom: 30px;">
+            <form [formGroup]="buyerForm" (ngSubmit)="myItems()" style="margin: auto;width: 50%;background-color: #eee;padding: 50px;">
+                <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleInputPassword1">Crop To Buy</label>
+                    <select formControlName="cropToBuy" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                        <option value="" disabled selected hidden>Choose Crop To Buy</option>
+                        <option value="fertilizer1">maize</option>
+                        <option value="fertilizer2">beans</option>
+                        <option value="fertilizer3">cabbage</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label style="margin-top: 20px;"  for="exampleInputPassword1">Bags To Buy</label>
+                    <input formControlName="noOfBags" type="number" class="form-control" id="inputs" placeholder="Bags To Buy">
+                </div>
+                <button style="margin-top: 20px;"type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
