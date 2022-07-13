@@ -12,16 +12,44 @@ export class SignUpComponent implements OnInit {
 
   myForm!: FormGroup;
 
-  constructor(private registeruser: RegisteruserService ,private router:Router) {}
+  constructor(private registeruser: RegisteruserService ,private router:Router ) {}
+    // role = ''
+    // onSelected(value:string):void{
+    //   this.role = value;
+    // }
+  // allprofiles = [
+
+  //   new Si('farmer','farmer'),
+  //   new FormGroup('buyer'),
+  //   new FormGroup('supplier'),
+  //   new FormGroup('agent'),
+  //   new FormGroup('admin')
+  // ]
   ngOnInit(){
     this.initForm();
   }
+  roles = [
+    {name:'farmer',number:1},
+    {name:'buyer',number:2},
+    {name:'supplier', number:3},
+    {name:'agent',number:4},
+    {name:'agent',number:5},
+
+
+
+
+  ]
+ 
   initForm(){
     this.myForm = new FormGroup({
+      firstname :new FormControl('',[Validators.required]),
+      last_name :new FormControl('',[Validators.required]),
+
       username : new FormControl('',[Validators.required]),
+      role: new FormControl(this.roles[1]),
       email : new FormControl('',[Validators.required]),
-      password1 : new FormControl('',[Validators.required]),
-      password2 : new FormControl('',[Validators.required]),
+      password : new FormControl('',[Validators.required]),
+      confirm_password : new FormControl('',[Validators.required]),
 
 
 

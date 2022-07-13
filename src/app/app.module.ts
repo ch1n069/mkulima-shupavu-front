@@ -18,7 +18,6 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
 import { SupplierComponent } from './supplier/supplier.component';  
 
-
 @NgModule({
   declarations: [
     AppComponent,

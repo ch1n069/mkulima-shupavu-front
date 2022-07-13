@@ -7,9 +7,37 @@
     height: 100vh
 }
 
+#farmer {
+    margin-top: 53%;
+    font-family: 'Poppins'
+}
+
+#farmer p {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+nav a {
+    font-family: 'Poppins';
+}
+
+#signup:hover {
+    background-color: rgb(20, 148, 199);
+}
+
+#signup {
+    background-color: #5ED292;
+    border: none;
+}
+
 #buttons a {
-    background-color: black;
     border: 25px;
+    outline: black;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins'
 }
 
 #buttons a:hover {
