@@ -7,6 +7,11 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
   styleUrls: ['./supplier-form.component.css']
 })
 export class SupplierFormComponent implements OnInit {
+
+  supplyQuantities(){
+    
+  }
+  
   supplierForm = new FormGroup({
     fertilizerName:new FormControl('',[Validators.required]),
       chemicalName:new FormControl('',[Validators.required]),
@@ -17,6 +22,7 @@ export class SupplierFormComponent implements OnInit {
       fertilizerPrice:new FormControl('',[Validators.required]),
       seedsPrice:new FormControl('',[Validators.required]),
       chemicalsPrice:new FormControl('',[Validators.required]),
+      enterDate:new FormControl('',[Validators.required]),
   })
   supplier(){
     console.warn(this.supplierForm.value)
@@ -50,6 +56,9 @@ export class SupplierFormComponent implements OnInit {
   }
   get totalInputs(){
     return this.supplierForm.get('totalInputs');
+  }
+  get enterDate(){
+    return this.supplierForm.get('enterDate');
   }
 
 

@@ -18,10 +18,11 @@
                     <input formControlName="idNumber" type="number" class="form-control" id="exampleInputPassword1" placeholder="ID Number">
                 </div>
                 <div class="text-danger" *ngIf="idNumber && idNumber.invalid && idNumber.touched">This field is required</div>
-                <div class="form-group">
-                    <label style="margin-top: 20px;"  for="exampleInputPassword1">Gender</label>
-                    <input formControlName="gender" type="text" class="form-control" id="exampleInputPassword1" placeholder="Gender">
-                </div>
+                <select formControlName="gender" class="w-100" style="margin-top: 20px; border-radius: 7px; border-radius: 7px;padding: 7px;" name="" id="">
+                    <option value="" disabled selected hidden>Choose your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
                 <div class="text-danger" *ngIf="gender && gender.invalid && gender.touched">This field is required</div>
                 <div class="form-group">
                     <label style="margin-top: 20px;"  for="exampleInputPassword1">Occupation</label>

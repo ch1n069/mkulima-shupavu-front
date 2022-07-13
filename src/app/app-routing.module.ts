@@ -29,10 +29,12 @@ const routes: Routes = [
   // { path:"guarantor", component:GuarantorFormComponent },
   { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
   { path:"guarantor", canActivate: [AuthGuard], component:GuarantorFormComponent },
-  // { path:"buyer", component:BuyerFormComponent },
+  { path:"buyer", component:BuyerFormComponent },
   { path:"supplier", canActivate: [AuthGuard], component:SupplierFormComponent },
-  { path:"supplier", component:SupplierFormComponent },
+  { path:"supplierForm", component:SupplierFormComponent },
+  // { path:"supplier", component:SupplierComponent },
   { path:"inputs", canActivate: [AuthGuard], component:InputsComponent },
+  // { path:"inputs", component:InputsComponent },
   { path:"home", canActivate:[ LoginGuard], component:HomeComponent },
 
 ];
