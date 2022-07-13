@@ -14,7 +14,7 @@ function supplierQuantities(){
 
     let totalAmountDue = (totalChem + totalFert + totalSed);
     console.log(totalAmountDue)
-    return totalAmountDue;
+    // return totalAmountDue;
 
     // append chemicals
     // let appChem = document.querySelector("#the-chem");
