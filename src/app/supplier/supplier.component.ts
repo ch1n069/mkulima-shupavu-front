@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./supplier.component.css']
 })
 export class SupplierComponent implements OnInit {
+  supplierQuanties(){}
 
   constructor() { }
 
