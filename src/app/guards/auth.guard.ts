@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  id_token : any = localStorage.getItem('id_token');
+  id_token : any = localStorage.getItem('user');
   constructor(private router:Router){
     
   

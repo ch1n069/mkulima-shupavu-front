@@ -6,7 +6,7 @@ import {HomeComponent} from './home/home.component'
 import { FarmerComponent } from './farmer/farmer.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
-import { AuthGuard } from './guards/auth.guard';
+// import { } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 import { SupplierComponent } from './supplier/supplier.component';
 
@@ -15,9 +15,9 @@ const routes: Routes = [
   {path:"login" ,canActivate:[LoginGuard] , component:LoginComponent},
   {path:"signup", canActivate:[LoginGuard], component:SignUpComponent},
   {path:"home", canActivate:[ LoginGuard], component:HomeComponent},
-  {path:"farmer",canActivate:[AuthGuard], component:FarmerComponent},
-  {path:"our-services", canActivate:[AuthGuard, LoginGuard], component:OurServicesComponent},
-  {path:"agent", canActivate:[AuthGuard, LoginGuard],  component:AgentComponent},
+  {path:"farmer",canActivate:[LoginGuard], component:FarmerComponent},
+  {path:"our-services", canActivate:[ LoginGuard], component:OurServicesComponent},
+  {path:"agent", canActivate:[ LoginGuard],  component:AgentComponent},
   {path:"supplier", component:SupplierComponent},
 
 

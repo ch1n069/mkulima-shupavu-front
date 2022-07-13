@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="user?.authenticatedUser?.role  == '3'">
     <div class="main-body">
 
         <nav aria-label="breadcrumb" class="main-breadcrumb">
@@ -274,6 +274,8 @@
                         <button class="btn btn-success">Apply For a Loan</button>
 
                     </div>
+
+
                 </div>
 
 

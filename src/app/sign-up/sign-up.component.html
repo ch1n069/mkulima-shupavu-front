@@ -11,6 +11,10 @@
                                     <!-- <img src="https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 185px;" alt="logo"> -->
                                     <h4 class="mt-1 mb-5 pb-1">Welcome to Mkulima Shupavu</h4>
                                 </div>
+                                <div class="error alert alert-danger" *ngIf="errormessage">
+                                    <small>{{errormessage}}></small>
+
+                                </div>
 
                                 <form [formGroup]="myForm" (ngSubmit)="registration()">
                                     <div class="form-outline mb-4">
