@@ -1,3 +1,45 @@
+function supplierQuantities(){
+    let chemVal = parseInt(document.querySelector("#chem").value);
+    parseInt(chemVal)
+    let sedVal = parseInt(document.querySelector("#sed").value);
+    let fertVal = parseInt(document.querySelector("#fert").value);
+
+    let quantFert = parseInt(document.querySelector("#input1").value);
+    let quantSed = parseInt(document.querySelector("#input2").value);
+    let quantChem = parseInt(document.querySelector("#input3").value);
+
+    let totalFert = (quantFert * fertVal)
+    let totalSed = (quantSed * sedVal)
+    let totalChem = (quantChem * chemVal)
+
+    let totalAmountDue = (totalChem + totalFert + totalSed);
+    console.log(totalAmountDue)
+    return totalAmountDue;
+
+    // append chemicals
+    // let appChem = document.querySelector("#the-chem");
+    // appChem.append(chemVal)
+
+    // let appFert = document.querySelector("#the-fert");
+    // appFert.append(fertVal)
+
+    // let appSed = document.querySelector("#the-sed");
+    // appSed.append(sedVal)
+    
+    let appAmount = document.querySelector("#the-invoice").value;
+    appAmount.append(totalAmountDue)
+
+    console.log(appAmount)
+    console.log(appSed)
+    console.log(totalAmountDue)
+    
+
+    console.log(chemVal) 
+    console.log(sedVal) 
+    console.log(fertVal) 
+    return totalAmountDue;   
+}
+
 function inputs(){
 
     var input1 = parseInt(document.getElementById('input1').value);
@@ -31,9 +73,14 @@ function inputs(){
     // var ucprice2 = document.getElementById('ucprice2').value;
     // var ucprice3 = document.getElementById('ucprice3').value;
     var calculationValue = document.getElementById('selection').value;
-    var totalamount = (calculationValue * input1)+(calculationValue * input2)+(calculationValue * input3).toFixed(2);
+    var totalAmount1 = ((calculationValue * input1).toFixed(2));
+    var totalAmount2 = ((calculationValue * input2).toFixed(2));
+    var totalAmount3 = ((calculationValue * input3).toFixed(2));
+    var totalLoan = (totalAmount1 + totalAmount2 + totalAmount3);
+    
     // totalamount.toString().replace(/\(?=(\d{3})+(?!\d))/g, ",");
-    document.getElementById('totalamount').innerHTML = "Total Amount = Ksh. "+totalamount;
+    document.getElementById('totalamount').innerHTML = "Total Amount = Ksh. "+totalLoan;
+    document.getElementById('totalmoney').innerHTML = "Total Amount = Ksh. "+totalLoan;
     // if (selection1 === fprice1){
     //     document.getElementById('total').value = input * fprice1;
     // }

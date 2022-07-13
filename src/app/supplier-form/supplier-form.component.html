@@ -2,6 +2,10 @@
     <div class="container">
         <div style="padding-bottom: 30px;">
             <form [formGroup]="supplierForm" (ngSubmit)="supplier()" style="margin: auto;width: 50%;background-color: #eee;padding: 50px;">
+                <label style="margin-bottom: 20px;padding-right:8px;" for="supply-date" id="EnterDate">Enter Today's Date </label>
+                <input formControlName="enterDate" type="date" id="">
+                <div class="text-danger" *ngIf="enterDate && enterDate.invalid && enterDate.touched">This field is required</div>
+
                 <div class="form-group">
                     <label style="color: black; display:block;"  for="exampleInputEmail1">Fertilizer name</label>
                     <select formControlName="fertilizerName" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
@@ -14,7 +18,7 @@
                 <div class="text-danger" *ngIf="fertilizerName && fertilizerName.invalid && fertilizerName.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">Chemical Name</label>
-                    <select formControlName="chemicalName" class="w-100" style=" border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                    <select formControlName="chemicalName" class="w-100" style=" border-radius: 7px;padding: 7px;" name="cars" id="selection" form="carform">
                         <option value="" disabled selected hidden>Choose a chemical name</option>
                         <option value="chemical1">NeemPro</option>
                         <option value="chemical2">Traxos</option>
@@ -26,7 +30,7 @@
                 <div class="text-danger" *ngIf="chemicalName && chemicalName.invalid && chemicalName.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">Seed's name</label>
-                    <select formControlName="seedsName" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                    <select formControlName="seedsName" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="selection" form="carform">
                         <option value="" disabled selected hidden>Choose seed's name</option>
                         <option value="seedling1">maize</option>
                         <option value="seedling2">beans</option>
@@ -36,69 +40,79 @@
                 <div class="text-danger" *ngIf="seedsName && seedsName.invalid && seedsName.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputPassword1">Fertilizer Price</label>
-                    <select formControlName="fertilizerPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                    <select formControlName="fertilizerPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="fert" form="carform">
                         <option value="" disabled selected hidden>Choose a fertilizer's price</option>
-                        <option value="price1">1Kg @ Ksh.200</option>
-                        <option value="price2">3Kg @ Ksh.550</option>
-                        <option value="price3">10Kg @ Ksh.1800</option>
+                        <option value="200">1Kg @ Ksh.200</option>
+                        <option value="550">3Kg @ Ksh.550</option>
+                        <option value="1800">10Kg @ Ksh.1800</option>
                     </select>
                 </div>
                 <div class="text-danger" *ngIf="fertilizerPrice && fertilizerPrice.invalid && fertilizerPrice.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputPassword1">Seed's Price</label>
-                    <select formControlName="seedsPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                    <select formControlName="seedsPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="sed" form="carform">
                         <option value="" disabled selected hidden>Choose seed's price</option>
-                        <option value="price1">cabbage 1Kg Ksh.150</option>
-                        <option value="price2">cabbage 3Kg Ksh.400</option>
-                        <option value="price3">cabbage 5Kg Ksh.700</option>
-                        <option value="price1">maize 1Kg Ksh.200</option>
-                        <option value="price2">maize 3Kg Ksh.550</option>
-                        <option value="price3">maize 5Kg Ksh.900</option>
-                        <option value="price1">beans 1Kg Ksh.250</option>
-                        <option value="price2">beans 3Kg Ksh.700</option>
-                        <option value="price3">beans 5Kg Ksh.950</option>
+                        <option value="150">cabbage 1Kg Ksh.150</option>
+                        <option value="400">cabbage 3Kg Ksh.400</option>
+                        <option value="700">cabbage 5Kg Ksh.700</option>
+                        <option value="200">maize 1Kg Ksh.200</option>
+                        <option value="550">maize 3Kg Ksh.550</option>
+                        <option value="900">maize 5Kg Ksh.900</option>
+                        <option value="250">beans 1Kg Ksh.250</option>
+                        <option value="700">beans 3Kg Ksh.700</option>
+                        <option value="950">beans 5Kg Ksh.950</option>
                     </select>
                 </div>
                 <div class="text-danger" *ngIf="seedsPrice && seedsPrice.invalid && seedsPrice.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputPassword1">Chemicals Price</label>
-                    <select formControlName="chemicalsPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                    <select formControlName="chemicalsPrice" class="w-100" style="border-radius: 7px;padding: 7px;" name="cars" id="chem" form="carform">
                         <option value="" disabled selected hidden>Choose chemical's price</option>
-                        <option value="price1">DAP 5Kg Ksh.200</option>
-                        <option value="price1">DAP 20Kg Ksh.400</option>
-                        <option value="price2">DAP 50Kg Ksh.1000</option>
-                        <option value="price1">CAN 5Kg Ksh.400</option>
-                        <option value="price1">CAN 20Kg Ksh.800</option>
-                        <option value="price3">CAN 50Kg Ksh.2000</option>
-                        <option value="price1">UREA 5Kg Ksh.800</option>
-                        <option value="price1">UREA 20Kg Ksh.2000</option>
-                        <option value="price4">UREA 50Kg Ksh.3000</option>
+                        <option value="1000">DAP 5Kg Ksh.1000</option>
+                        <option value="4000">DAP 20Kg Ksh.4000</option>
+                        <option value="10000">DAP 50Kg Ksh.10000</option>
+                        <option value="1000">CAN 5Kg Ksh.1000</option>
+                        <option value="4000">CAN 20Kg Ksh.4000</option>
+                        <option value="10000">CAN 50Kg Ksh.10000</option>
+                        <option value="1000">UREA 5Kg Ksh.1000</option>
+                        <option value="4000">UREA 20Kg Ksh.4000</option>
+                        <option value="10000">UREA 50Kg Ksh.10000</option>
                     </select>
                 </div>
                 <div class="text-danger" *ngIf="chemicalsPrice && chemicalsPrice.invalid && chemicalsPrice.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Fertilizer Bags</label>
-                    <input style="border-radius: 7px;border: solid black 1px; " formControlName="fertilizerBags" type="number" class="form-control" id="inputs" placeholder="Bags To Buy">
+                    <input style="border-radius: 7px;border: solid black 1px; " formControlName="fertilizerBags" type="number" class="form-control" id="input1" placeholder="Bags To Buy">
                 </div>
                 <div class="text-danger" *ngIf="fertilizerBags && fertilizerBags.invalid && fertilizerBags.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Seed's Bags</label>
-                    <input style="border-radius: 7px;border: solid black 1px;" formControlName="seedsBags" type="number" class="form-control" id="inputs" placeholder="Bags To Buy">
+                    <input style="border-radius: 7px;border: solid black 1px;" formControlName="seedsBags" type="number" class="form-control" id="input2" placeholder="Bags To Buy">
                 </div>
                 <div class="text-danger" *ngIf="seedsBags && seedsBags.invalid && seedsBags.touched">This field is required</div>
                 <div class="form-group">
                     <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Chemical Bags</label>
-                    <input style="border-radius: 7px; border: solid black 1px;" formControlName="chemicalsBags" type="number" class="form-control" id="inputs" placeholder="Bags To Buy">
+                    <input style="border-radius: 7px; border: solid black 1px;" formControlName="chemicalsBags" type="number" class="form-control" id="input3" placeholder="Bags To Buy">
                 </div>
                 <div class="text-danger" *ngIf="chemicalsBags && chemicalsBags.invalid && chemicalsBags.touched">This field is required</div>
-                <button type="submit" style="margin-top: 20px;" onclick="inputs();" class="btn btn-outline-success">Submit</button>
-                <div class="form-group">
+                <!-- <button type="submit" style="margin-top: 20px;" onclick="inputs();" class="btn btn-outline-success">Submit</button> -->
+                <!-- <div class="form-group">
                     <label style="margin-top: 20px;"  for="exampleInputPassword1">Total Amount</label>
                     <input formControlName="totalInputs" type="number" class="form-control" id="total" placeholder="Total Amount">
                 </div>
-                <!-- <div class="text-danger" *ngIf="totalInputs && totalInputs.invalid && totalInputs.touched">This field is required</div> -->
+                <div class="text-danger" *ngIf="totalInputs && totalInputs.invalid && totalInputs.touched">This field is required</div> -->
+                <h3 style="margin-top: 20px;" class="text-success" id="total"></h3>
+                <button [disabled]="supplierForm.invalid" style="margin-top: 20px;" onclick="supplierQuantities();" class="btn btn-success"><a style="text-decoration: none; color: white;" >Submit</a></button>
+                <br>
+                <br>
                 <!-- <button style="margin-top: 20px;"type="submit" class="btn btn-outline-success">Submit</button> -->
             </form>
         </div>
     </div>
 </section>
+<script>
+   
+
+    
+
+</script>
