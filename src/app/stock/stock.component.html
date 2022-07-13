@@ -1,0 +1,72 @@
+<section style="height: 100vh;">
+    <div class="container" style="padding-top: 50px;">
+        <div style="padding-top: 30px;padding-bottom: 30px;background-color: #eee;">
+            <!-- <h3 style="padding-bottom: 20px;" class="text-center">Please Fill The Following Form </h3> -->
+            <form [formGroup]="stockForm" (ngSubmit)="availabeStock()" style="margin: auto;width: 50%;">
+                <h3 class="text-center">Available Stock</h3>
+                <div class="form-group">
+                    <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">Fertilizer name</label>
+                    <select formControlName="fertilizerName" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                        <option value="" disabled selected hidden>Choose a fertilizer name</option>
+                        <option value="DAP">DAP</option>
+                        <option value="CAN">CAN</option>
+                        <option value="UREA">UREA</option>
+                    </select>
+                </div>
+                <div class="text-danger" *ngIf="fertilizerName && fertilizerName.invalid && fertilizerName.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">Seeds name</label>
+                    <select formControlName="seedsName" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                        <option value="" disabled selected hidden>Choose a seeds name</option>
+                        <option value="cabbage">cabbage</option>
+                        <option value="maize">maize</option>
+                        <option value="beans">beans</option>
+                    </select>
+                </div>
+                <div class="text-danger" *ngIf="seedsName && seedsName.invalid && seedsName.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">pesticides name</label>
+                    <select formControlName="pesticides" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                        <option value="" disabled selected hidden>Choose a pesticides name</option>
+                        <option value="neemPro">neemPro</option>
+                        <option value="axial">axial</option>
+                        <option value="traxos">traxos</option>
+                    </select>
+                </div>
+                <div class="text-danger" *ngIf="pesticides && pesticides.invalid && pesticides.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; display:block; margin-top: 20px;"  for="exampleInputEmail1">herbicides name</label>
+                    <select formControlName="herbicides" class="w-100" style="border-radius: 7px; border-radius: 7px;padding: 7px;" name="cars" id="cars" form="carform">
+                        <option value="" disabled selected hidden>Choose a herbicides name</option>
+                        <option value="lumax">lumax</option>
+                        <option value="PrimaGram">PrimaGram</option>
+                    </select>
+                </div>
+                <div class="text-danger" *ngIf="herbicides && herbicides.invalid && herbicides.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Fertilizer Bags</label>
+                    <input style="border-radius: 7px;border: solid black 1px; " formControlName="fertilizerBags" type="number" class="form-control" id="input1" placeholder="Bags To Buy">
+                </div>
+
+
+                <div class="text-danger" *ngIf="fertilizerBags && fertilizerBags.invalid && fertilizerBags.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Seed's Bags</label>
+                    <input style="border-radius: 7px;border: solid black 1px;" formControlName="seedsBags" type="number" class="form-control" id="input2" placeholder="Bags To Buy">
+                </div>
+                <div class="text-danger" *ngIf="seedsBags && seedsBags.invalid && seedsBags.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">pesticides Quantity</label>
+                    <input style="border-radius: 7px; border: solid black 1px;" formControlName="pesticidesQuantity" type="number" class="form-control" id="input3" placeholder="Bags To Buy">
+                </div>
+                <div class="text-danger" *ngIf="pesticidesQuantity && pesticidesQuantity.invalid && pesticidesQuantity.touched">This field is required</div>
+                <div class="form-group">
+                    <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">herbicides Quantity</label>
+                    <input style="border-radius: 7px; border: solid black 1px;" formControlName="herbicidesQuantity" type="number" class="form-control" id="input3" placeholder="Bags To Buy">
+                </div>
+                <div class="text-danger" *ngIf="herbicidesQuantity && herbicidesQuantity.invalid && herbicidesQuantity.touched">This field is required</div>
+                <button style="margin-top: 20px;width: 30%;" [disabled]="stockForm.invalid" type="submit" class="btn btn-success">Next</button>
+            </form>
+        </div>
+    </div>
+</section>
