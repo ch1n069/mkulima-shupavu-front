@@ -14,7 +14,7 @@ function supplierQuantities(){
 
     let totalAmountDue = (totalChem + totalFert + totalSed);
     console.log(totalAmountDue)
-    return totalAmountDue;
+    // return totalAmountDue;
 
     // append chemicals
     // let appChem = document.querySelector("#the-chem");
@@ -72,15 +72,15 @@ function inputs(){
     // var ucprice1 = document.getElementById('ucprice1').value;
     // var ucprice2 = document.getElementById('ucprice2').value;
     // var ucprice3 = document.getElementById('ucprice3').value;
-    var calculationValue = document.getElementById('selection').value;
-    var totalAmount1 = ((calculationValue * input1).toFixed(2));
-    var totalAmount2 = ((calculationValue * input2).toFixed(2));
-    var totalAmount3 = ((calculationValue * input3).toFixed(2));
-    var totalLoan = (totalAmount1 + totalAmount2 + totalAmount3);
+    // var calculationValue = document.getElementById('selection').value;
+    // var totalAmount1 = ((calculationValue * input1).toFixed(2));
+    // var totalAmount2 = ((calculationValue * input2).toFixed(2));
+    // var totalAmount3 = ((calculationValue * input3).toFixed(2));
+    // var totalLoan = (totalAmount1 + totalAmount2 + totalAmount3);
     
-    // totalamount.toString().replace(/\(?=(\d{3})+(?!\d))/g, ",");
-    document.getElementById('totalamount').innerHTML = "Total Amount = Ksh. "+totalLoan;
-    document.getElementById('totalmoney').innerHTML = "Total Amount = Ksh. "+totalLoan;
+    // // totalamount.toString().replace(/\(?=(\d{3})+(?!\d))/g, ",");
+    // document.getElementById('totalamount').innerHTML = "Total Amount = Ksh. "+totalLoan;
+    // document.getElementById('totalmoney').innerHTML = "Total Amount = Ksh. "+totalLoan;
     // if (selection1 === fprice1){
     //     document.getElementById('total').value = input * fprice1;
     // }
