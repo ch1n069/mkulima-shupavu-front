@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card w-100" style="margin: auto;border-radius: 7px;padding-bottom: 30px;">
             <form [formGroup]="inputsForm" (ngSubmit)="myInputs()" style="margin: auto;width: 50%;border-radius: 7px;padding-top: 20px;">
-                <h3 class="text-center">Inputs</h3>
+                <h3 class="text-center">Inputs You Would Like To Loan</h3>
                 <div class="form-group">
                     <label style="color: black; margin-top: 20px;"  for="exampleInputPassword1">Fertilizer Bags</label>
                     <input style="border-radius: 7px;border: solid black 1px; " formControlName="fertilizerBags" type="number" class="form-control" id="input1" onchange="inputs()" placeholder="Bags To Buy">
@@ -92,10 +92,11 @@
                     </select>
                 </div>
                 <div class="text-danger" *ngIf="chemicalsPrice && chemicalsPrice.invalid && chemicalsPrice.touched">This field is required</div>
-                <button [disabled]="inputsForm.invalid" style="margin-top: 20px;" onclick="inputs();" class="btn btn-success"><a style="text-decoration: none; color: white;" href="home">Submit</a></button>
+                <h3 style="margin-top: 20px;" class="text-success" id="totalamount"></h3>
+                <button [disabled]="inputsForm.invalid" style="margin-top: 20px;" onclick="inputs();" class="btn btn-success"><a style="text-decoration: none; color: white;" href="home">Click Here To Proceed</a></button>
                 <br>
                 <br>
-                <h3 class="text-success" id="totalamount"></h3>
+                
             </form>
         </div>
     </div>
