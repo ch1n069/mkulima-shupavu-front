@@ -17,6 +17,7 @@ export class InputsComponent implements OnInit {
     fertilizerPrice:new FormControl('',[Validators.required]),
     seedsPrice:new FormControl('',[Validators.required]),
     chemicalsPrice:new FormControl('',[Validators.required]),
+    herbicidesPrice:new FormControl('',[Validators.required]),
   })
   myInputs()
   {
@@ -49,7 +50,9 @@ export class InputsComponent implements OnInit {
   get chemicalsPrice(){
     return this.inputsForm.get('chemicalsPrice');
   }
-
+  get herbicidesPrice(){
+    return this.inputsForm.get('herbicidesPrice');
+  }
   constructor() { }
 
   ngOnInit(): void {
