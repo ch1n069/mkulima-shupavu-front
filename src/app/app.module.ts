@@ -16,7 +16,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ServicesComponent } from './services/services.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
-import { SupplierComponent } from './supplier/supplier.component';  
+import { SupplierComponent } from './supplier/supplier.component';
+import { StockComponent } from './stock/stock.component';  
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { SupplierComponent } from './supplier/supplier.component';
     OurServicesComponent,
     AgentComponent,
     SupplierComponent,
+    StockComponent,
   ],
   imports: [
     BrowserModule,

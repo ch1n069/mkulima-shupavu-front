@@ -14,6 +14,7 @@ import { AgentComponent } from './agent/agent.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 import { SupplierComponent } from './supplier/supplier.component';
+import { StockComponent } from './stock/stock.component';
 
 const routes: Routes = [
 
@@ -30,12 +31,15 @@ const routes: Routes = [
   { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
   { path:"guarantor", canActivate: [AuthGuard], component:GuarantorFormComponent },
   { path:"buyer", component:BuyerFormComponent },
-  { path:"supplier", canActivate: [AuthGuard], component:SupplierFormComponent },
-  { path:"supplierForm", component:SupplierFormComponent },
+  { path:"supplierForm", canActivate: [AuthGuard], component:SupplierFormComponent },
+  // { path:"supplierForm", component:SupplierFormComponent },
   // { path:"supplier", component:SupplierComponent },
+  { path:"supplier", canActivate: [AuthGuard], component:SupplierComponent },
   { path:"inputs", canActivate: [AuthGuard], component:InputsComponent },
   // { path:"inputs", component:InputsComponent },
   { path:"home", canActivate:[ LoginGuard], component:HomeComponent },
+  // { path:"stock", component:StockComponent },
+  { path:"stock", canActivate:[ LoginGuard], component:StockComponent },
 
 ];
 
