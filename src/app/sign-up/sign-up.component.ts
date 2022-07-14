@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class SignUpComponent implements OnInit {
 
   myForm!: FormGroup;
+  errormessage:any
 
   constructor(private registeruser: RegisteruserService ,private router:Router ) {}
     // role = ''
@@ -73,7 +74,16 @@ export class SignUpComponent implements OnInit {
         }
 
 
-      })
+      },(error=>{
+        this.errormessage = error
+        console.log(error)
+
+
+
+
+
+
+      }))
     }
     
 

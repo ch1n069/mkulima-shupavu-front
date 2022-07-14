@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppServiceService } from '../service/app-service.service';
 // import { Router } from '@angular/router';
 
 @Component({
@@ -9,9 +10,15 @@ import { Router } from '@angular/router';
 })
 export class FarmerComponent implements OnInit {
   result!: number
-  constructor(private router:Router) { }
+  constructor(private router:Router ,public appService:AppServiceService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(typeof(this.appService.isFarmer()))
+    console.log(typeof(this.appService.isSupplier()))
+
+
+
+  }
 
 
 
@@ -28,6 +35,8 @@ export class FarmerComponent implements OnInit {
 
 
   }
+
+
 
 
 }

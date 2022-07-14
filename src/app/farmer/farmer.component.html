@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="main-body">
+<div class="container " *ngIf="appService.isFarmer()">
+    <div class="main-body ">
 
         <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
@@ -280,7 +280,7 @@
     </div>
 </div>
 
-{{result}}
+
 
 
 <!-- produce form -->

@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { baseUrl } from 'src/environments/environment';
 
 @Injectable({
@@ -12,9 +12,28 @@ export class RegisteruserService {
   constructor(private http: HttpClient , router: Router) { }
   UserRegistration(data:any):Observable<any> {
     console.log("ima laice")
-    return this.http.post(`${baseUrl}register`, data);
+    return this.http.post(`${baseUrl}register`, data).pipe(
+      catchError(this.handleError)
+
+    );
     
 
 
+  }
+  private handleError(error: HttpErrorResponse) {
+    let errormessage = ''
+    if (error.status === 0) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong.
+      console.error(
+        `Backend returned code ${error.status}, body was: `, error.error);
+        errormessage =  `Backend returned code ${error.status}, body was: `, error.error
+    }
+    // Return an observable with a user-facing error message.
+    errormessage = 'There was error while registering this user try registering again.'
+    return throwError(() => new Error('There was error while registering this user try registering again.'));
   }
 }

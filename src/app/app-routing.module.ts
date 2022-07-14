@@ -11,9 +11,11 @@ import { SupplierFormComponent } from './supplier-form/supplier-form.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
-import { AuthGuard } from './guards/auth.guard';
+// import { } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 import { SupplierComponent } from './supplier/supplier.component';
+import { AuthGuard } from './guards/auth.guard';
+import { FarmerGuard } from './guards/farmer.guard';
 
 const routes: Routes = [
 
@@ -21,13 +23,12 @@ const routes: Routes = [
   { path:"home", component:HomeComponent },
   { path:"login" ,canActivate:[LoginGuard] , component:LoginComponent },
   { path:"signup", canActivate:[LoginGuard], component:SignUpComponent },
-  { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
+  { path:"farmer",canActivate:[AuthGuard] , component:FarmerComponent },
   { path:"our-services", canActivate:[AuthGuard, LoginGuard], component:OurServicesComponent },
   { path:"agent", canActivate:[AuthGuard, LoginGuard],  component:AgentComponent },
   // { path:"loan", component:LoanFormComponent },
   { path:"loan", canActivate: [AuthGuard], component:LoanFormComponent },
   // { path:"guarantor", component:GuarantorFormComponent },
-  { path:"farmer",canActivate:[AuthGuard], component:FarmerComponent },
   { path:"guarantor", canActivate: [AuthGuard], component:GuarantorFormComponent },
   { path:"buyer", component:BuyerFormComponent },
   { path:"supplier", canActivate: [AuthGuard], component:SupplierFormComponent },

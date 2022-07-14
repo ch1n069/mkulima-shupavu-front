@@ -10,10 +10,14 @@
                                 <div class="text-center">
                                     <!-- <img src="https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 185px;" alt="logo"> -->
                                     <h4 class="mt-1 mb-5 pb-1">Welcome back</h4>
+                                    <div class="form-error alert alert-danger" *ngIf="errormessage">
+                                        <small class="text-danger">{{errormessage}}</small>
+                                    </div>
+
                                 </div>
 
                                 <form #userLog="ngForm" [formGroup]="formGroup" (ngSubmit)="LoginProcess()">
-                                    <p>Please login to your account</p>
+                                    <p class="mt-2">Please login to your account</p>
 
                                     <div class="form-outline mb-4">
                                         <input type="email" formControlName="email" id="form2Example11" class="form-control" placeholder="Email" />

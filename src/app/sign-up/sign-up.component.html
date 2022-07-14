@@ -10,9 +10,10 @@
                                 <div class="text-center">
                                     <!-- <img src="https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 185px;" alt="logo"> -->
                                     <h4 class="mt-1 mb-5 pb-1">Welcome to Mkulima Shupavu</h4>
+                                    <div class="error-section alert alert-danger" *ngIf="errormessage"><small class="error-message">{{errormessage}}</small></div>
                                 </div>
 
-                                <form [formGroup]="myForm" (ngSubmit)="registration()">
+                                <form class="mt-5" [formGroup]="myForm" (ngSubmit)="registration()">
                                     <div class="form-outline mb-4">
                                         <input type="firstname" formControlName="firstname" id="form2Example11" class="form-control" placeholder="First Name" />
                                         <label class="form-label" for="form2Example11">First Name</label>
