@@ -11,12 +11,23 @@ import { SupplierFormComponent } from './supplier-form/supplier-form.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { AgentComponent } from './agent/agent.component';
-import { AuthGuard } from './guards/auth.guard';
+// import { } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 import { SupplierComponent } from './supplier/supplier.component';
 import { StockComponent } from './stock/stock.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
+  {path:"" , redirectTo:"home", pathMatch:"full"},
+  {path:"login" ,canActivate:[LoginGuard] , component:LoginComponent},
+  {path:"signup", canActivate:[LoginGuard], component:SignUpComponent},
+  {path:"home", canActivate:[ LoginGuard], component:HomeComponent},
+  {path:"farmer",canActivate:[LoginGuard], component:FarmerComponent},
+  {path:"our-services", canActivate:[ LoginGuard], component:OurServicesComponent},
+  {path:"agent", canActivate:[ LoginGuard],  component:AgentComponent},
+  {path:"supplier", component:SupplierComponent},
+=======
+>>>>>>> 013b13a5fa1054b47531cd3833379c685e20421a
 
   { path:"" , redirectTo:"home", pathMatch:"full" },
   { path:"home", component:HomeComponent },

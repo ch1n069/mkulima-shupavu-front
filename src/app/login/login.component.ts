@@ -14,10 +14,16 @@ export class LoginComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private loginService: LoginService, private router:Router){}
+  errormessage : any ;
+
+
+  constructor(private loginService: LoginService, private router:Router){
+    
+  }
   
   ngOnInit(){
     this.initForm();
+
 
   }
   initForm(){
@@ -31,12 +37,21 @@ export class LoginComponent implements OnInit {
      if(this.formGroup.valid){
        this.loginService.loginUser(this.formGroup.value).subscribe(result=>{
         
-        this.router.navigate(['/farmer'])
         
 
          if(result!=null){
-          localStorage.setItem("id_token",result.token)
-          console.log(result.token)
+          //  sessionStorage.setItem("user",result)
+          
+
+          localStorage.setItem("user",JSON.stringify(result))
+          this.router.navigate(['/farmer'])
+
+
+
+          // localStorage.setItem("user_role",result)
+          // console.log(result)
+
+          // alert(result.token)
 
 
            
@@ -45,7 +60,12 @@ export class LoginComponent implements OnInit {
           alert("Check your password or email")
 
          }
-       })
+       },(error)=>{
+         this.errormessage = error
+
+         alert(error)
+       }
+       )
      }
 
    }

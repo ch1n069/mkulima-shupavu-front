@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="user?.authenticatedUser?.role  == '3'">
     <div class="main-body">
 
         <nav aria-label="breadcrumb" class="main-breadcrumb">
@@ -273,6 +273,8 @@
                     <div class="col-sm-6 mb-3">
                         <a href="loan" style="margin-top: 20px;" type="button" class="btn btn-success">Apply For a Loan</a>
                     </div>
+
+
                 </div>
             </div>
         </div>

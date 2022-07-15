@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 // import { Router } from '@angular/router';
 
 @Component({
@@ -9,14 +10,21 @@ import { Router } from '@angular/router';
 })
 export class FarmerComponent implements OnInit {
   result!: number
-  constructor(private router:Router) { }
+  user:any
+  role:any
+  constructor(private router:Router, private loginService:LoginService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user = this.loginService.getSessionUser
+    this.role = this.user?.authenitcatedUser?.role
+    console.log(this.user['authenitcatedUser'])
+
+  }
 
 
 
   logout(){
-    localStorage.removeItem('id_token')
+    localStorage.removeItem('user')
     this.router.navigate(['/login'])
 
   }

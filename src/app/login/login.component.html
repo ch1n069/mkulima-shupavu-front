@@ -12,8 +12,17 @@
                                     <h4 class="mt-1 mb-5 pb-1">Welcome back</h4>
                                 </div>
 
-                                <form #userLog="ngForm" [formGroup]="formGroup" (ngSubmit)="LoginProcess()">
-                                    <p>Please login to your account</p>
+                                <!-- <div class="error alert alert-danger" *ngIf="errormessage"> -->
+                                <!-- <small>{{errormessage}}</small> -->
+
+                                <!-- </div> -->
+
+                                <form #userLog="ngForm" [formGroup]="formGroup" (ngSubmit)="LoginProcess() ">
+                                    <!-- <p>Please login to your account</p> -->
+                                    <div class="text-danger">{{errormessage}}</div>
+                                    <!-- <div class="sect"> -->
+                                    <!-- <small class="alert alert-message">please input your details again</small> -->
+                                    <!-- </div> -->
 
                                     <div class="form-outline mb-4">
                                         <input type="email" formControlName="email" id="form2Example11" class="form-control" placeholder="Email" />
