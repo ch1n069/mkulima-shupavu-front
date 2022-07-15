@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoansService } from '../loans.service';
 import { AppServiceService } from '../service/app-service.service';
 // import { Router } from '@angular/router';
 
@@ -10,15 +11,24 @@ import { AppServiceService } from '../service/app-service.service';
 })
 export class FarmerComponent implements OnInit {
   result!: number
-  constructor(private router:Router ) { }
+  loans: any;
+
+
+
+  constructor(private router:Router , private loansService:LoansService ) { }
 
   ngOnInit(): void {
+    this.loansService.getloans().subscribe((results)=>{
+      this.loans = results.result ;
+      console.log('JSON RESPONSE = ' ,JSON.stringify(results));
+    })
     // console.log(typeof(this.appService.isFarmer()))
     // console.log(typeof(this.appService.isSupplier()))
 
 
 
   }
+  
 
 
 
