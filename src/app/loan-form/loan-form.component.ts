@@ -13,6 +13,7 @@ export class LoanFormComponent implements OnInit {
       idNumber:new FormControl('', [Validators.required]),
       gender:new FormControl('', [Validators.required]),
       location:new FormControl('', [Validators.required]),
+      occupation:new FormControl('', [Validators.required]),
       email:new FormControl('', [Validators.required,Validators.email]),
     });
     borrowLoan(){
@@ -35,6 +36,9 @@ export class LoanFormComponent implements OnInit {
     }
     get email(){
       return this.loanForm.get('email');
+    }
+    get occupation(){
+      return this.loanForm.get('occupation');
     }
 
 
