@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;400&family=Bebas+Neue&family=Lato:ital,wght@1,900&family=Lobster&family=Oswald:wght@200;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;1,100&family=Raleway:wght@600&family=Roboto+Condensed&family=Rye&family=Splash&display=swap');
 #one {
-    background-image: url("https://images.pexels.com/photos/158179/lake-constance-sheep-pasture-sheep-blue-158179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-image: url("https://www.isda-africa.com/wp-content/uploads/2020/06/isda_homepage_carousel_01_intro-1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,15 +8,23 @@
 }
 
 #farmer {
-    margin-top: 53%;
-    font-family: 'Poppins'
+    margin-top: 50%;
+    color: white;
+    font-family: 'sans-serif'
+}
+
+.centerpage1 {
+    margin-top: 20%;
+    font-size: 23px;
+    color: white;
 }
 
 #farmer p {
-    font-family: 'Poppins';
+    padding-top: 20px;
+    font-family: sans-serif;
     color: white;
-    font-weight: bold;
-    font-size: 23px;
+    /* font-weight: bold; */
+    /* font-size: 23px; */
 }
 
 nav a {
@@ -24,12 +32,14 @@ nav a {
 }
 
 #signup:hover {
-    background-color: rgb(20, 148, 199);
+    background-color: #13885f;
 }
 
 #signup {
-    background-color: #5ED292;
+    background-color: #0a9665;
     border: none;
+    padding: 12px;
+    margin-top: 20px;
 }
 
 #buttons a {
@@ -40,13 +50,18 @@ nav a {
     font-family: 'Poppins'
 }
 
-#buttons a:hover {
+
+/* #buttons a:hover {
     background-color: rgb(17, 177, 38);
-}
+} */
 
 p {
     font-family: 'Popins';
     font-weight: 300;
+}
+
+.solutionheader {
+    font-size: xx-large;
 }
 
 h3 {
@@ -64,6 +79,15 @@ h3 {
     font-family: "Oswald";
     font-weight: bold;
     color: #ccc;
+}
+
+.dot {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 10px;
+    display: inline-flex;
 }
 
 

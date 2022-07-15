@@ -15,6 +15,14 @@
                 </div> -->
                 <!-- <div class="text-danger" *ngIf="lastName && lastName.invalid && lastName.touched">This field is required</div> -->
                 <div class="form-group">
+                    <label style="margin-top: 20px;" for="exampleInputPassword1">First Name</label>
+                    <input formControlName="first_name" type="text" class="form-control" id="first_name" placeholder="first name">
+                </div>
+                <div class="form-group">
+                    <label style="margin-top: 20px;" for="exampleInputPassword1">First Name</label>
+                    <input formControlName="last_name" type="text" class="form-control" id="last_name" placeholder="Last name">
+                </div>
+                <div class="form-group">
                     <label style="margin-top: 20px;" for="exampleInputPassword1">ID Number</label>
                     <input formControlName="id_number" type="number" class="form-control" id="exampleInputPassword1" placeholder="ID Number">
                 </div>
@@ -24,8 +32,13 @@
                     <option *ngFor="let gender of genders" [ngValue]="gender.value">{{gender.name}}</option>
                     <!-- <option value="Male">Male</option>
                     <option value="Female">Female</option> -->
-                <!-- </select> -->-->
+                <!-- </select> -->
                 <!-- <div class="text-danger" *ngIf="gender && gender.invalid && gender.touched">This field is required</div> -->
+                <div class="form-group">
+                    <label style="margin-top: 20px;" for="exampleInputPassword1">Location</label>
+                    <input formControlName="location" type="text" class="form-control" id="last_name" placeholder="Last name">
+                </div>
+
                 <div class="form-group">
                     <label style="margin-top: 20px;" for="exampleInputPassword1">Crop</label>
                     <input formControlName="crop" type="text" class="form-control" id="exampleInputPassword1" placeholder="Crop">

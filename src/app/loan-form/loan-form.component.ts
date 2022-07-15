@@ -53,6 +53,10 @@ export class LoanFormComponent implements OnInit {
   ]
   initForm() {
     this.loanForm = new FormGroup({
+      first_name :new FormControl('',[Validators.required]),
+      last_name :new FormControl('',[Validators.required]),
+
+
       id_number :new FormControl('',[Validators.required]),
       // location :new FormControl('',[Validators.required]),
       crop :new FormControl('',[Validators.required]),
