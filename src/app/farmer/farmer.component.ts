@@ -10,11 +10,11 @@ import { AppServiceService } from '../service/app-service.service';
 })
 export class FarmerComponent implements OnInit {
   result!: number
-  constructor(private router:Router ,public appService:AppServiceService) { }
+  constructor(private router:Router ) { }
 
   ngOnInit(): void {
-    console.log(typeof(this.appService.isFarmer()))
-    console.log(typeof(this.appService.isSupplier()))
+    // console.log(typeof(this.appService.isFarmer()))
+    // console.log(typeof(this.appService.isSupplier()))
 
 
 

@@ -16,39 +16,48 @@ export class AppServiceService {
 
 
   isFarmer(){
-    return this.getRoles(this.roles)
+    return this.getRoles().includes("1")
 
   }
   isBuyer(){
-    return this.getRoles(this.roles)
+    return this.getRoles().includes("2")
+
 
   }
   isSupplier(){
-    return this.getRoles(this.roles)
+    return this.getRoles().includes("4")
+
 
 
   }
 
-  getRoles(role?: any): string{
-    let roles 
+  getRoles(role?: any): string[]{
+    let roles = []
+    roles.push(role)
     if(role){
       roles = role
     }
-    if(role?.hasOwnProperty('1')){
-      roles = 'farmer'
-    }
-    if(role?.hasOwnProperty('2')){
-      roles = 'buyer'
-    }
-    // if(role.hasOwnProperty('3')){
-    //   roles = 'agnet'
-    // }
-    if(role?.hasOwnProperty('4')){
-      roles = 'supplier'
-    }
-    // if(role.hasOwnProperty('5')){
-    //   roles = 'admin'
-    // }
+    roles.foreach((role:any)=>{
+
+
+      if(role?.hasOwnProperty('1')){
+        roles.push('farmer')
+      }
+      if(role?.hasOwnProperty('2')){
+        roles.push('buyer')
+      }
+      // if(role.hasOwnProperty('3')){
+      //   roles = 'agnet'
+      // }
+      if(role?.hasOwnProperty('4')){
+        roles.push('supplier')
+      }
+      // if(role.hasOwnProperty('5')){
+      //   roles = 'admin'
+      // }
+
+    })
+    
 
 
     return roles

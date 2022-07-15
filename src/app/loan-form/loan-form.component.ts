@@ -38,7 +38,7 @@ export class LoanFormComponent implements OnInit {
     // }
 
 
-  constructor(private loanService: LoanService, private router:Router, public  appService:AppServiceService) { }
+  constructor(private loanService: LoanService, private router:Router) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -53,7 +53,7 @@ export class LoanFormComponent implements OnInit {
   ]
   initForm() {
     this.loanForm = new FormGroup({
-      idnumber :new FormControl('',[Validators.required]),
+      id_number :new FormControl('',[Validators.required]),
       // location :new FormControl('',[Validators.required]),
       crop :new FormControl('',[Validators.required]),
       // gender: new FormControl(this.genders[1]),

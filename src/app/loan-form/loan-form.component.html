@@ -1,4 +1,5 @@
-<section style="height: 100vh;" *ngIf="appService.isSupplier()">
+<section style="height: 100vh;">
+    <!-- *ngIf="appService.isSupplier()" -->
     <div class="container" style="padding-top: 50px;">
         <div style="padding-top: 30px;padding-bottom: 30px;background-color: #eee;">
             <h3 style="padding-bottom: 20px;" class="text-center">Please Fill The Following Form </h3>
@@ -15,7 +16,7 @@
                 <!-- <div class="text-danger" *ngIf="lastName && lastName.invalid && lastName.touched">This field is required</div> -->
                 <div class="form-group">
                     <label style="margin-top: 20px;" for="exampleInputPassword1">ID Number</label>
-                    <input formControlName="idnumber" type="number" class="form-control" id="exampleInputPassword1" placeholder="ID Number">
+                    <input formControlName="id_number" type="number" class="form-control" id="exampleInputPassword1" placeholder="ID Number">
                 </div>
                 <!-- <div class="text-danger" *ngIf="idNumber && idNumber.invalid && idNumber.touched">This field is required</div> -->
                 <!-- <select formControlName="gender" class="w-100" style="margin-top: 20px; border-radius: 7px; border-radius: 7px;padding: 7px;">
